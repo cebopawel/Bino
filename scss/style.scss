@@ -165,10 +165,7 @@ a.carousel-control-prev {
     top: calc(100% - 33px);
     left: calc(50% - 33px);
     background-color: #f4f5f9;
-   
     text-align: center;
-    
-    
     animation-name: shadow-blink;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -183,7 +180,6 @@ a.carousel-control-prev {
         left: 0;
         right: 0;
         bottom: 0;
-        
     }
 }
 @keyframes shadow-blink{
@@ -191,6 +187,9 @@ a.carousel-control-prev {
     50% {box-shadow: 0 0 0 0 $userPrimaryColor;}
     100% {box-shadow: 0 0 0 4px $userPrimaryColor;}
 }
+
+
+
 
 // MEDIA QUERIES
 @media only screen and (max-width: 360px) {
