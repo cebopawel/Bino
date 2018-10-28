@@ -1,9 +1,24 @@
+$userPrimaryColor: rgba(255,255,255,0.6);
+$userSecondaryColor: rgba(0,0,0,0.6);
+
+
+
+
 html, body {
     padding: 0;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+    h1{
+        font-size: 72px;
+    }
+    h4 {
+        font-size: 24px;
+    }
+    p, li {
+        font-size: 14px;
+    }
 }
-
-
 
 .logo-img {
      height: 50px;
@@ -38,6 +53,93 @@ nav .navbar {
     width:100%;
 }
 
+.indicator {
+    height: 15px;
+    width: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+margin: 0 30px;
+}
+
+.indicator:last-child, .indicator:first-child
+{
+    margin: 0;
+}
+
+
+.carousel-indicators{
+    list-style: none;
+     top:88%;
+}
+
+
+.carousel-indicators li, .carousel-indicators li.active{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    position: relative;
+    margin: 10px;           
+}
+
+.carousel-caption {
+    top: 35%;
+    text-align: center;
+}
+
+
+ .separator-carousel-item {
+    width: 7px;
+    height: 7px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    position:relative;  
+ }
+
+.separator-carousel-item::before {
+    background-color:rgba(255,255,255,0.6);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: absolute;
+    width: 80px;
+    margin: 3px 20px ;
+    -webkit-box-shadow: -120px 0px 0px 0px $userPrimaryColor;
+-moz-box-shadow: -120px 0px 0px 0px $userPrimaryColor;
+box-shadow: -120px 0px 0px 0px $userPrimaryColor;
+  }
+  
+
+    .button-red {
+        width:225px;
+        height: 56px;
+        border-radius: 5%;
+        background-color: #e74c3c;
+        text-decoration: none;
+        border: none;
+        color: white;
+        font-weight: 600;
+    }
+    .button-transparent{
+        width:225px;
+        height: 56px;
+        border-radius: 5%;
+        background-color: rgba(0,0,0,0);
+        border: 2px solid $userPrimaryColor;
+    color:white;
+    font-weight: 600;
+    }
+
+.carousel-control-arrow {
+    height: 45px;
+    width: 45px;
+    background-color: $userPrimaryColor;
+    .fas {
+        line-height: 45px;
+        font-size: 30px;
+        color: $userSecondaryColor;
+    }
+}
 
 
 
@@ -60,11 +162,9 @@ nav .navbar {
     }
   .slide-1 {
       background-image: url('/img/slide-bg-1-mobile.png');
-      
   }
   .slide-2 {
-      background-image: url('/img/slide-bg-2-mobile.png');
-      
+      background-image: url('/img/slide-bg-2-mobile.png');  
   }
   .slide-3 {
       background-image: url('/img/slide-bg-3-mobile.png');
