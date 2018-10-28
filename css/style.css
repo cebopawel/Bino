@@ -1,0 +1,59 @@
+html, body {
+  padding: 0;
+  margin: 0; }
+
+.logo-img {
+  height: 50px;
+  width: 142px; }
+
+.container-main {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh; }
+
+.menu-container {
+  position: absolute;
+  z-index: 10;
+  width: 100%; }
+
+nav .navbar {
+  position: absolute;
+  padding: 0;
+  margin: 0; }
+
+#slider-main {
+  top: 0;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%; }
+
+.slide-1, .slide-2, .slide-3 {
+  height: 100vh;
+  width: auto;
+  background-size: cover;
+  background-position: center bottom; }
+
+@media only screen and (max-width: 360px) {
+  .navbar-brand {
+    margin: auto; }
+
+  .slide-1 {
+    background-image: url("/img/slide-bg-1-mobile.png"); }
+
+  .slide-2 {
+    background-image: url("/img/slide-bg-2-mobile.png"); }
+
+  .slide-3 {
+    background-image: url("/img/slide-bg-3-mobile.png"); } }
+@media only screen and (min-width: 361px) {
+  .slide-1 {
+    background-image: url("/img/slider-img-1.jpg"); }
+
+  .slide-2 {
+    background-image: url("/img/slider-img-2.jpg"); }
+
+  .slide-3 {
+    background-image: url("/img/slider-img-3.jpg"); } }
