@@ -1,6 +1,7 @@
 $userPrimaryColor: rgba(255, 255, 255, 0.6);
 $userSecondaryColor: rgba(0, 0, 0, 0.6);
-
+$mobileHeight: 607px;
+$desktopHeight: 991px;
 
 
 
@@ -9,21 +10,46 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+.mobile-menu {
+    background-color: white;
+    z-index:100;
+    width:100vh;
+}
+
+
     h1 {
         font-size: 50px;
+        padding-bottom: 30px;
     }
-    h4 {
-        font-size: 24px;
+    h2 {
+        font-size: 24px !important;
         font-family: 'Source Sans Pro', sans-serif;
+        padding:30px;
     }
-    h5 {font-size: 18px;
+    h3 {font-size: 18px !important;
     }
-    p,
+    
     li {
         font-size: 14px;
     }
+
+p {
+    padding: 30px 15%;
+    font-size: 14px;
 }
 
+
+
+
+    .navbar-dark .navbar-toggler {
+        
+        border-color: transparent !important;
+        
+        
+ 
+}
 .logo-img {
     height: 50px;
     width: 142px;
@@ -33,7 +59,7 @@ body {
     position: relative;
     padding: 0;
     margin: 0;
-    height: 607px;
+    height: $mobileHeight;
 }
 
 .menu-container {
@@ -41,7 +67,9 @@ body {
     z-index: 10;
     width: 100%;
 }
-
+.navbar-toggler-icon {
+    color: red;
+}
 nav .navbar {
     position: absolute;
     padding: 0;
@@ -53,7 +81,7 @@ nav .navbar {
     z-index: 3;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: $mobileHeight;
     width: 100%;
 }
 
@@ -85,7 +113,7 @@ nav .navbar {
 }
 
 .carousel-caption {
-    top: 35%;
+    top: 20%;
     text-align: center;
 }
 
@@ -95,6 +123,7 @@ nav .navbar {
     background-color: red;
     border-radius: 50%;
     display: inline-block;
+    margin:30px;
     position: relative;
     &:before {
         background-color: rgba(255, 255, 255, 0.6);
@@ -141,23 +170,23 @@ a.carousel-control-prev {
 .carousel-control-arrow {
     height: 45px;
     width: 45px;
+    display:none;
     background-color: $userPrimaryColor;
     .fas {
         line-height: 45px;
         font-size: 30px;
         color: $userSecondaryColor;
+       
     }
 }
-
 .slide-1,
 .slide-2,
 .slide-3 {
-    height: 100vh;
+    height: $mobileHeight;
     width: auto;
     background-size: cover;
     background-position: center bottom;
 }
-
 .anchor-icon {
     height: 66px;
     width: 66px; 
@@ -188,40 +217,39 @@ a.carousel-control-prev {
     50% {box-shadow: 0 0 0 0 $userPrimaryColor;}
     100% {box-shadow: 0 0 0 4px $userPrimaryColor;}
 }
-
-
 .feauture-content {
 width: auto;
 height:auto;
-margin-top: 80px;
 justify-content: space-around;
 display:block;
 }
 
 .feauture-card{
-    margin-top: 50px;
+    margin-top: 80px;
     text-align:center;
     align-items: center;
+    min-width:250px;
+    
 }
  .feauture-icon {
    line-height: 70px;
-   
-
-
-}
-.feauture-icon {
+    position: relative;
     height:70px;
     width:70px;
     margin:auto;
-    align-items: baseline;
-    border: 1px solid $userSecondaryColor;
-    transition: all 1s ease-in-out;
-   &:hover {
-       border: 1px solid orange;
-        transform: rotate(45deg);
-   }
 }
-
+.magic-border{
+    position: absolute;
+    height:70px;
+width:70px;
+margin:auto;
+border: 1px solid $userSecondaryColor;
+transition: all 1s ease-in-out;
+z-index: 100;
+&:hover {
+    border: 1px solid orange;
+     transform: rotate(45deg);
+}}
 .feauture-separator {
     width: 40px;
     border: 1px solid $userSecondaryColor;
@@ -230,11 +258,16 @@ display:block;
     font-family: 'Source Sans Pro', sans-serif;
  color: $userSecondaryColor;
 }
-// MEDIA QUERIES
+
+.navbar-brand {
+    margin: auto;
+}
+
+
+// MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES 
+
 @media only screen and (max-width: 360px) {
-    .navbar-brand {
-        margin: auto;
-    }
+    
     .slide-1 {
         background-image: url('/img/slide-bg-1-mobile.png');
     }
@@ -244,6 +277,7 @@ display:block;
     .slide-3 {
         background-image: url('/img/slide-bg-3-mobile.png');
     }
+    
 }
 
 
@@ -251,20 +285,17 @@ display:block;
     h1 {
         font-size: 72px;
     }
-    h4 {
-        font-size: 24px;
+    h2 {
+        font-size: 24px !important;
     }
-    h5 {font-size: 18px;
+    h3 {font-size: 18px !important;
     }
     p, li {
         font-size: 14px;
     }
-
-
-
-
-
-
+    .navbar-brand {
+        margin: 0;
+    }
 
     .slide-1 {
         background-image: url('/img/slider-img-1.jpg');
@@ -275,19 +306,46 @@ display:block;
     .slide-3 {
         background-image: url('/img/slider-img-3.jpg');
     }
-    .button-transparent {
-        display: inline-block;
-    }
+    
     .container-main {
-        height: 100vh;
+        height: $desktopHeight;
     }
-
+    #slider-main,
+    .slide-1,
+    .slide-2,
+    .slide-3 {
+        height: $desktopHeight;
+    }
     .feauture-content {
         justify-content: space-around;
 display:flex;
     }
 
+}
+
+
+@media only screen and (min-width: 576px) {
+    .button-transparent {
+        display: inline-block;
+    }
+    
+    .carousel-control-arrow{
+        display: block;
+    }
+    
+}
+    
+
+
+
+@media only screen and (min-width: 768px) {  
+    li a{
+        color:white !important;
+    }
     .feauture-card{
         display:inline-block;
     }
+}
+
+@media only screen and (min-width: 992px) {
 }
