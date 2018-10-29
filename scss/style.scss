@@ -2,7 +2,7 @@ $userPrimaryColor: rgba(255, 255, 255, 0.6);
 $userSecondaryColor: rgba(0, 0, 0, 0.6);
 $mobileHeight: 607px;
 $desktopHeight: 991px;
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 
 html,
@@ -91,6 +91,7 @@ nav .navbar {
     border: 2px solid white;
     border-radius: 50%;
     margin: 0 30px;
+    transition: all .4s;
 }
 
 .indicator:last-child,
@@ -151,6 +152,7 @@ nav .navbar {
     text-decoration: none;
     border: none;
     color: $userPrimaryColor;
+    transition: all 1s;
 }
 
 .button-transparent {
@@ -158,6 +160,7 @@ nav .navbar {
     border: 2px solid $userPrimaryColor;
     display: none;
     color: $userPrimaryColor;
+    transition: all 1s;
 }
 
 a.carousel-control-next,
@@ -172,6 +175,7 @@ a.carousel-control-prev {
     width: 45px;
     display:none;
     background-color: $userPrimaryColor;
+    transition: all .4s;
     .fas {
         line-height: 45px;
         font-size: 30px;
@@ -228,7 +232,7 @@ display:block;
     margin-top: 80px;
     text-align:center;
     align-items: center;
-    min-width:250px;
+    min-width:185px;
     
 }
  .feauture-icon {
@@ -261,6 +265,31 @@ z-index: 100;
 
 .navbar-brand {
     margin: auto;
+}
+.button-red:hover, .button-transparent:hover, .indicator:hover {
+    cursor: pointer;
+}
+
+.button-red:hover{
+    
+    color: $userPrimaryColor;
+    background-color:transparent;
+    border: 2px solid red;
+}
+
+.button-transparent:hover{
+    
+    color: $userSecondaryColor;
+    background-color: $userPrimaryColor;
+}
+.carousel-control-arrow:hover{
+    
+    color: $userSecondaryColor;
+    background-color:red;
+}
+.indicator:hover {
+    
+    background-color: $userPrimaryColor; 
 }
 
 
@@ -318,7 +347,7 @@ z-index: 100;
     }
     .feauture-content {
         justify-content: space-around;
-display:flex;
+display:block;
     }
 
 }
@@ -331,6 +360,7 @@ display:flex;
     
     .carousel-control-arrow{
         display: block;
+        
     }
     
 }
@@ -341,6 +371,10 @@ display:flex;
 @media only screen and (min-width: 768px) {  
     li a{
         color:white !important;
+    }
+    .feauture-content {
+        justify-content: space-around;
+display:flex;
     }
     .feauture-card{
         display:inline-block;

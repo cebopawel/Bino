@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro");
 html,
 body {
   padding: 0;
@@ -67,7 +68,8 @@ nav .navbar {
   width: 15px;
   border: 2px solid white;
   border-radius: 50%;
-  margin: 0 30px; }
+  margin: 0 30px;
+  transition: all .4s; }
 
 .indicator:last-child,
 .indicator:first-child {
@@ -119,13 +121,15 @@ nav .navbar {
   background-color: #e74c3c;
   text-decoration: none;
   border: none;
-  color: rgba(255, 255, 255, 0.6); }
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 1s; }
 
 .button-transparent {
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid rgba(255, 255, 255, 0.6);
   display: none;
-  color: rgba(255, 255, 255, 0.6); }
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 1s; }
 
 a.carousel-control-next,
 a.carousel-control-prev {
@@ -137,7 +141,8 @@ a.carousel-control-prev {
   height: 45px;
   width: 45px;
   display: none;
-  background-color: rgba(255, 255, 255, 0.6); }
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all .4s; }
   .carousel-control-arrow .fas {
     line-height: 45px;
     font-size: 30px;
@@ -191,7 +196,7 @@ a.carousel-control-prev {
   margin-top: 80px;
   text-align: center;
   align-items: center;
-  min-width: 250px; }
+  min-width: 185px; }
 
 .feauture-icon {
   line-height: 70px;
@@ -222,6 +227,25 @@ a.carousel-control-prev {
 
 .navbar-brand {
   margin: auto; }
+
+.button-red:hover, .button-transparent:hover, .indicator:hover {
+  cursor: pointer; }
+
+.button-red:hover {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 2px solid red; }
+
+.button-transparent:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.6); }
+
+.carousel-control-arrow:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: red; }
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.6); }
 
 @media only screen and (max-width: 360px) {
   .slide-1 {
@@ -268,7 +292,7 @@ a.carousel-control-prev {
 
   .feauture-content {
     justify-content: space-around;
-    display: flex; } }
+    display: block; } }
 @media only screen and (min-width: 576px) {
   .button-transparent {
     display: inline-block; }
@@ -278,6 +302,10 @@ a.carousel-control-prev {
 @media only screen and (min-width: 768px) {
   li a {
     color: white !important; }
+
+  .feauture-content {
+    justify-content: space-around;
+    display: flex; }
 
   .feauture-card {
     display: inline-block; } }
