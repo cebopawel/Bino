@@ -370,6 +370,7 @@ cursor: pointer;
     .slide-3 {
         background-image: url('/img/slider-img-3.jpg');
     }
+    // I DECIDE TO PU .JPG FILES AS A BACKGROUND, BECOAUSE OF BETTER QUALITY WITH LESS WEIGHT. IF WE WANTED TO BE ABLE TO CHANGE THE BACKGROUND I WILL PUT .PNG FILES WITH TRANSPARENT BACKGROUND. IN THIS CASE I USE .JPG FILES WITH WHITE BACKGROUND. 
     .dark-overlay {
         background-image: url('/img/dark-overlay-bg.png');
         width: inherit;
